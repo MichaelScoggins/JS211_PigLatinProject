@@ -34,7 +34,7 @@ const rl = readline.createInterface({
 // splice out 'y' (first sound)
 // concat/push 'y' (first sound) to end
 
-//  concat 'ay' to the end
+//  concat 'ay' to the end 
 
 
 const vowelArray = ['a', 'e', 'i', 'o', 'u']  
