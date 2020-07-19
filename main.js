@@ -56,7 +56,7 @@ const findFirstVowel = (consonantWord) => {
   let poop = consonantWord.join()
   for(let i = 0; i < vowelArray.length; i++) {
     if (poop.includes(vowelArray[i])) {
-      return poop.search(vowelArray.join());
+      return poop.match(vowelArray[i]);
 
       // modifyWord()
 
