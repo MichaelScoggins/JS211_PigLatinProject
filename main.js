@@ -53,10 +53,11 @@ const pigLatin = (word) => {
 }
   
 const findFirstVowel = (consonantWord) => {
-  let foundVowel = 
+  let poop = consonantWord.join()
   for(let i = 0; i < vowelArray.length; i++) {
-    if (splitWord.includes(vowelArray[i])) {
-      return splitWord.search(vowelArray.join());
+    if (poop.includes(vowelArray[i])) {
+      return poop.search(vowelArray.join());
+
       // modifyWord()
 
     // }
