@@ -36,30 +36,38 @@ const rl = readline.createInterface({
 
 //  concat 'ay' to the end
 
+
+const vowelArray = ['a', 'e', 'i', 'o', 'u']  
+
 const pigLatin = (word) => {  
   let splitWord = word.trim().toLowerCase().split('')  
-  const vowelArray = ['a', 'e', 'i', 'o', 'u']  
-    for(let i = 0; i < splitWord.length; i++) {
-      if (vowelArray.includes(splitWord[0])) {
-        return word.concat("yay"); 
-      } else {
-        findFirstVowel();
-        }    
-    }
+  for(let i = 0; i < splitWord.length; i++) {
+    if (vowelArray.includes(splitWord[0])) {
+      return word.concat("yay"); 
+    } else {
+      return findFirstVowel(splitWord);
+    }    
   }
-  
-  const findFirstVowel = (firstVowel) => {
-    for(let i = 0; i < splitWord.length; i++) {
-      if (splitWord[i].includes(vowelArray)) {
-        return splitWord.search(vowelArray)
-      } else {
 
-      }
+
+}
+  
+const findFirstVowel = (consonantWord) => {
+  let foundVowel = 
+  for(let i = 0; i < vowelArray.length; i++) {
+    if (splitWord.includes(vowelArray[i])) {
+      return splitWord.search(vowelArray.join());
+      // modifyWord()
+
+    // }
+    // else {
+
+    // } 
     }    
 
   }
+}
 
-  return addYay()
 
 
 
