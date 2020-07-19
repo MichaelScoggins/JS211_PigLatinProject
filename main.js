@@ -23,53 +23,46 @@ const rl = readline.createInterface({
 // 2. if word begins in with a consonant send to another function: splices off beginning, returns word with new ending.
 // 3. if multiple words, create array of words, loop over them, sending them to different functions and creating a new array with the new words.
 
-
 // "yesTerday" => esterdayyay
-// scrub the data
-// if word begins with vowel add 'yay' 
-// turn our string into an array
 
 
 // if word begins with consonant
-// list the vowels: a, e, i, o, u
 // run through string until we find the first vowel
 // identify index position, store and use
 // store sound before vowel in a variable (bucket)
 
-
 // splice out 'y' (first sound)
 // concat/push 'y' (first sound) to end
 
-
 //  concat 'ay' to the end
 
-let vowelArray = ['a', 'e', 'i', 'o', 'u']
-
-
-
-
-const findWord = () => {
-
-}
-
-
 const pigLatin = (word) => {  
-  let splitWord = word.trim().toLowerCase().split('')
-  let yay = "yay"
-  const addYay = () => {
-    return word.concat(yay)
+  let splitWord = word.trim().toLowerCase().split('')  
+  const vowelArray = ['a', 'e', 'i', 'o', 'u']  
+    for(let i = 0; i < splitWord.length; i++) {
+      if (vowelArray.includes(splitWord[0])) {
+        return word.concat("yay"); 
+      } else {
+        findFirstVowel();
+        }    
+    }
   }
-  for(let i = 0; i < splitWord.length; i++) {
-    if (vowelArray.includes(splitWord)) {
-      addYay(); 
-    } else {
-      findWord();
+  
+  const findFirstVowel = (firstVowel) => {
+    for(let i = 0; i < splitWord.length; i++) {
+      if (splitWord[i].includes(vowelArray)) {
+        return splitWord.search(vowelArray)
+      } else {
+
+      }
     }    
+
   }
 
   return addYay()
 
-}
+
+
 
 
 
