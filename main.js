@@ -42,10 +42,9 @@ const pigLatin = (word) => {
   let finalWord = "";
   let cleanWord = word.toLowerCase().trim()
   if (vowels.indexOf(cleanWord[0]) > -1) {
-      finalWord = cleanWord + "yay";
-      return finalWord;
+    finalWord = cleanWord + "yay";
+    return finalWord;
   } else {
-    // we used a regex BOOM
     let firstMatch = cleanWord.match(/[aeiou]/g) || 0;
     let vowelIndex = cleanWord.indexOf(firstMatch[0]);
     finalWord = cleanWord.slice(vowelIndex) + cleanWord.slice(0, vowelIndex) + "ay";
