@@ -34,39 +34,25 @@ const rl = readline.createInterface({
 // splice out 'y' (first sound)
 // concat/push 'y' (first sound) to end
 
-//  concat 'ay' to the end
+//  concat 'ay' to the end 
 
 
-const vowelArray = ['a', 'e', 'i', 'o', 'u']  
-
-const pigLatin = (word) => {  
-  let splitWord = word.trim().toLowerCase().split('')  
-  for(let i = 0; i < splitWord.length; i++) {
-    if (vowelArray.includes(splitWord[0])) {
-      return word.concat("yay"); 
-    } else {
-      return findFirstVowel(splitWord);
-    }    
-  }
-
-
-}
-  
-const findFirstVowel = (consonantWord) => {
-  let foundVowel = 
-  for(let i = 0; i < vowelArray.length; i++) {
-    if (splitWord.includes(vowelArray[i])) {
-      return splitWord.search(vowelArray.join());
-      // modifyWord()
-
-    // }
-    // else {
-
-    // } 
-    }    
-
+const pigLatin = (word) => {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let finalWord = "";
+  let cleanWord = word.toLowerCase().trim()
+  if (vowels.indexOf(cleanWord[0]) > -1) {
+    finalWord = cleanWord + "yay";
+    return finalWord;
+  } else {
+    let firstMatch = cleanWord.match(/[aeiou]/g) || 0;
+    let vowelIndex = cleanWord.indexOf(firstMatch[0]);
+    finalWord = cleanWord.slice(vowelIndex) + cleanWord.slice(0, vowelIndex) + "ay";
+    return finalWord;
   }
 }
+
+
 
 
 
